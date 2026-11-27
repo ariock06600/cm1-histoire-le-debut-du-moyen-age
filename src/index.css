@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes arrowFlight {
+  0% {
+    transform: translate(0px, 12px) rotate(-18deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(118px, -22px) rotate(-4deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(128px, 18px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flagWave {
+  0%, 100% {
+    transform: skewY(0deg);
+  }
+  50% {
+    transform: skewY(-6deg);
+  }
+}
+
+.animate-arrow-flight {
+  animation: arrowFlight 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.animate-flag-wave {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: flagWave 2.8s ease-in-out infinite;
+}

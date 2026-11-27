@@ -1,0 +1,6 @@
+{
+  "name": "Le Moyen Âge — Cours CM1",
+  "description": "Cours interactif d'histoire pour les élèves de CM1 sur les débuts du Moyen Âge, les vestiges, les fortifications et les écrits médiévaux, à partir des documents du cahier.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
